@@ -1,4 +1,4 @@
-package com.luminous;
+package com.luminous.test;
 
 import junit.framework.TestCase;
 

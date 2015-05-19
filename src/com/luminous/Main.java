@@ -1,17 +1,12 @@
 package com.luminous;
 
 import com.google.gson.Gson;
-import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.*;
-import com.luminous.exception.NotEnoughArgumentsException;
 import com.luminous.domain.Rule;
-import com.luminous.domain.Validator;
-import com.luminous.exception.RuleNotSupportedException;
 import com.luminous.utils.Util;
 
 import java.io.*;
-import java.nio.file.NotDirectoryException;
 import java.util.Set;
 
 public class Main {
@@ -29,50 +24,39 @@ public class Main {
 
     public static void main(String[] args) throws IOException, DocumentException {
 
-        PrintStream writer = System.out;
-        Validator validator = new Validator();
-        try {
-            validator.validate(args);
-        } catch (NotEnoughArgumentsException e) {
-            writer.println(e.getMessage());
-            return;
-        } catch (FileNotFoundException e) {
-            writer.println(e.getMessage());
-            return;
-        } catch (NotDirectoryException e) {
-            writer.println(e.getMessage());
-            return;
-        }
+        //validate here
 
-//        printPdfForms(INPUT_2);
-        manipulatePdf(INPUT_2, "res/Result.pdf");
+        String xlsPath = args[0];
+        String pdfTemplatePath = args[1];
+        String rulesPath = args[2];
+        String outPath = args[3];
 
 
         Gson gson = new Gson();
-/*
-        Rule rule = new Rule("fill", "textFirstName", "Calin");
-        String r = gson.toJson(rule);
-*/
-
         String in = Util.readFile("res/fill_rule.json");
-
         Rule rule = gson.fromJson(in, Rule.class);
 
-//        RuleInterpreter interpreter = new RuleInterpreter(rule);
-
         if (rule.getAction().equals(ACTION_FILL)) {
+            System.out.println("Got fill action");
+
             String fieldName = rule.getFieldName();
             String value = rule.getValue();
+            modifyField(pdfTemplatePath, "res/results/Result.pdf", fieldName, value);
         }
+
+//        printPdfForms(pdfTemplatePath);
+
+
+//        PdfManipulator manipulator = new PdfManipulator(rules, out);
 
 
     }
 
-    public static void manipulatePdf(String src, String dest) throws IOException, DocumentException {
+    public static void modifyField(String src, String dest, String fieldName, String value) throws IOException, DocumentException {
         PdfReader reader = new PdfReader(src);
         PdfStamper stamper = new PdfStamper(reader, new FileOutputStream(dest));
         AcroFields form = stamper.getAcroFields();
-        form.setField("title", "Calin");
+        form.setField(fieldName, value);
 //        form.setFieldProperty("text_2", "fflags", 0, null);
 //        form.regenerateField("text_4");
         stamper.close();
