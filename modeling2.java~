@@ -1,0 +1,35 @@
+{
+	"action" : "fill",
+	"fieldName" : "textFirstName",
+	"value" : "Calin"
+}
+{
+	"action" : "check",
+	"fieldName" : "isCool"
+}
+{
+	"action" : "fillFromExcel",
+	"colName" : "firstName",
+	"fieldName" : "textFirstName"
+}
+{
+	"action" : "checkFromExcel",
+	"colName" : "sms",
+	"fieldName" : "isSms"
+}
+{
+	"action" : "conditionalFillFromExcel",
+	"colName" : "myColumnName",
+	"predicate" : "contains",
+	"testVal" : "groovy",
+	"value" : "We are groovy!",
+	"fieldName" : "theGroovyField"
+}
+{
+	"action" : "conditionalCheckFromExcel",
+	"colName" : "myColumnName",
+	"predicate" : "equals",
+	"testVal" : "groovy",
+	"fieldName" : "isGroovy"
+}
+

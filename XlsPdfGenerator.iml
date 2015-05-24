@@ -11,5 +11,6 @@
     <orderEntry type="library" name="itext-pdfa-5.5.6-javadoc" level="project" />
     <orderEntry type="library" name="gson-2.3.1" level="project" />
     <orderEntry type="library" name="hamcrest-junit-2.0.0.0" level="project" />
+    <orderEntry type="library" name="poi-3.12" level="project" />
   </component>
 </module>

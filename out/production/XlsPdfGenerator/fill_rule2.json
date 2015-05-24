@@ -1,0 +1,12 @@
+[
+{
+"action": "fill",
+"fieldName": "adress",
+"value" : "Calin's crib"
+},
+{
+"action": "fillFromXls",
+"fieldName": "adress",
+"value": "Calin's crib"
+}
+]

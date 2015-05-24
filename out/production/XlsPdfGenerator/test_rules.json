@@ -1,0 +1,125 @@
+[
+  {
+    "action" : "fillFromExcel",
+    "colName" : "transactionid",
+    "fieldName" : "regristreringsnummer"
+  },
+  {
+    "action" : "fill",
+    "fieldName" : "ortOchDatum",
+    "value": "NOT APPLICABLE"
+  },
+  {
+    "action" : "fillFromExcel",
+    "colName" : "consultant",
+    "fieldName" : "idNummer"
+  },
+  {
+    "action" : "fillFromExcel",
+    "colName" : "bill_to_firstname",
+    "fieldName" : "fornamn"
+  },
+  {
+    "action" : "fillFromExcel",
+    "colName" : "bill_to_lastname",
+    "fieldName" : "efternamn"
+  },
+  {
+    "action" : "fillFromExcel",
+    "colName" : "bill_to_street",
+    "fieldName" : "adress"
+  },
+  {
+    "action" : "fill",
+    "fieldName" : "postnummer",
+    "value" : "ZIP UNKNOWN"
+  },
+  {
+    "action" : "fillFromExcel",
+    "colName" : "city",
+    "fieldName" : "ort"
+  },
+  {
+    "action" : "fillFromExcel",
+    "colName" : "bill_to_email",
+    "fieldName" : "epost"
+  },
+  {
+    "action" : "fillFromExcel",
+    "colName" : "bill_to_phonefast",
+    "fieldName" : "telefonMobil"
+  },
+  {
+    "action" : "fillFromExcel",
+    "colName" : "bill_to_bank",
+    "fieldName" : "bankensNamn"
+  },
+  {
+    "action" : "fillFromExcel",
+    "colName" : "bill_to_clearingnummer",
+    "fieldName" : "clearingnummer"
+  },
+  {
+    "action" : "fillFromExcel",
+    "colName" : "bill_to_kontonummer",
+    "fieldName" : "kontonummer"
+  },
+  {
+    "action" : "fill",
+    "fieldName" : "personnummer",
+    "value" : "NOT APPLICABLE"
+  },
+  {
+    "action" : "fill",
+    "fieldName" : "kontrolluppgifterHamtadeFran",
+    "value" : "NOT APPLICABLE"
+  },
+  {
+    "action" : "conditionalCheckFromExcel",
+    "colName" : "Bill_to_news_SMS",
+    "predicate" : "contains",
+    "testVal": "Ja Tack",
+    "fieldName" : "checkSms"
+  },
+  {
+    "action" : "conditionalCheckFromExcel",
+    "colName" : "Bill_to_news_mail",
+    "predicate" : "contains",
+    "testVal": "Ja Tack",
+    "fieldName" : "checkEpost"
+  },
+  {
+    "action" : "check",
+    "fieldName" : "100kr"
+  },
+  {
+    "action" : "conditionalCheckFromExcel",
+    "colName" : "product",
+    "predicate" : "equals",
+    "testVal": "150kr",
+    "fieldName" : "150kr"
+  },
+  {
+    "action" : "conditionalCheckFromExcel",
+    "colName" : "product",
+    "predicate" : "equals",
+    "testVal": "200kr",
+    "fieldName" : "200kr"
+  },
+  {
+    "action" : "conditionalCheckFromExcel",
+    "colName" : "product",
+    "predicate" : "equals",
+    "testVal": "250kr",
+    "fieldName" : "250kr"
+  },
+  {
+    "action" : "conditionalCheckFromExcel",
+    "colName" : "product",
+    "predicate" : "equals",
+    "testVal": "300kr",
+    "fieldName" : "300kr"
+  }
+
+
+]
