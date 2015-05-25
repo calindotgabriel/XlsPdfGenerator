@@ -15,15 +15,12 @@ import java.util.List;
  */
 public class JsonSerializer {
 
-    private String jsonPath;
     private String jsonArray;
-
-    public static final Type LIST_TYPE = new TypeToken<ArrayList<Rule>>() {
+    private static final Type LIST_TYPE = new TypeToken<ArrayList<Rule>>() {
     }.getType();
 
 
     public JsonSerializer(String jsonPath) throws IOException {
-        this.jsonPath = jsonPath;
         this.jsonArray = Util.readFile(jsonPath);
     }
 

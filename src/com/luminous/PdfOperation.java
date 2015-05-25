@@ -17,15 +17,11 @@ public class PdfOperation {
 
     public static final String STATE_CHECKED = "Yes";
 
-    private final String templatePdfPath;
-    private final String outPdfPath;
     private final PdfReader reader;
     private final PdfStamper stamper;
     private final AcroFields form;
 
     public PdfOperation(String templatePdfPath, String outPdfPath) throws IOException, DocumentException {
-        this.templatePdfPath = templatePdfPath;
-        this.outPdfPath = outPdfPath;
         reader = new PdfReader(templatePdfPath);
         stamper = new PdfStamper(reader, new FileOutputStream(outPdfPath));
         form = stamper.getAcroFields();

@@ -78,9 +78,8 @@ public class XlsWorker {
         return headerIndexMap;
     }
 
-    public String getValueForColumnIndex(int index, String colName) throws KeyException {
+    public String getValueForColumnIndex(int index, String colName) {
         if (!headerIndexMap.containsKey(colName)) {
-//            throw new KeyException("No such column: " + colName + " in the provided .xls file");
             System.out.println("No such column: " + colName);
             return "";
         }
