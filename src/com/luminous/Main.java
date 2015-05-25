@@ -4,22 +4,27 @@ import com.google.gson.Gson;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.*;
 import com.luminous.domain.Rule;
+import com.luminous.domain.Validator;
+import com.luminous.exception.NotEnoughArgumentsException;
 import com.luminous.utils.Util;
 
 import java.io.*;
+import java.security.KeyException;
 import java.util.List;
 import java.util.Set;
 
 public class Main {
 
 
-    public static void main(String[] args) throws IOException, DocumentException {
+    public static void main(String[] args) throws IOException, DocumentException, KeyException, NotEnoughArgumentsException {
+
+        Validator validator = new Validator();
+        validator.validate(args);
+
         String xlsPath = args[0];
         String pdfTemplatePath = args[1];
         String rulesPath = args[2];
         String outPath = args[3];
-
-        rulesPath = "res/test_rules.json";
 
         JsonSerializer serializer = new JsonSerializer(rulesPath);
         List<Rule> rules = serializer.serializeJsonArray();
@@ -75,8 +80,4 @@ public class Main {
         }
         worker.commit();
     }
-
-
-
-
 }

@@ -8,6 +8,7 @@ import org.apache.poi.ss.usermodel.Row;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.security.KeyException;
 import java.util.*;
 
 /**
@@ -18,12 +19,14 @@ public class XlsWorker {
     private final HSSFSheet sheet;
     private final FileInputStream file;
     private Map<String, List<String>> colResultMap;
+    private Map<String, Integer> headerIndexMap;
 
     public XlsWorker(String xlsPath) throws IOException {
         file = new FileInputStream(new File(xlsPath));
         HSSFWorkbook workbook = new HSSFWorkbook(file);
         sheet = workbook.getSheetAt(0);
         colResultMap = new HashMap<String, List<String>>();
+        buildHeaderMap();
     }
 
     public List<String> getRecordsForColumn(String columnName) {
@@ -44,12 +47,13 @@ public class XlsWorker {
 
         while (rowIterator.hasNext()) {
             Row row = rowIterator.next();
-            Cell cell = row.getCell(map.get(columnName)); // TODO error handling when no such row.
+            Integer match = map.get(columnName);
+            Cell cell = row.getCell(match); // TODO error handling when no such row.
             if (cell != null) {
                 cell.setCellType(Cell.CELL_TYPE_STRING);
                 results.add(cell.getStringCellValue());
             } else {
-                System.out.println("Warning, empty element at: " + columnName);
+//                System.out.println("Warning, empty element at: " + columnName);
                 results.add("");
             }
         }
@@ -61,7 +65,7 @@ public class XlsWorker {
     }
 
     private Map<String, Integer> buildHeaderMap() {
-        Map<String, Integer> map = new HashMap<String, Integer>();
+        headerIndexMap = new HashMap<String, Integer>();
         Row header = sheet.getRow(0);
         Iterator<Cell> headCellIterator = header.cellIterator();
         int columnIndex = 0;
@@ -69,13 +73,18 @@ public class XlsWorker {
             Cell headCell = headCellIterator.next();
             headCell.setCellType(Cell.CELL_TYPE_STRING);
             String headColumnName = headCell.getStringCellValue();
-            map.put(headColumnName, columnIndex++);
+            headerIndexMap.put(headColumnName, columnIndex++);
         }
-        return map;
+        return headerIndexMap;
     }
 
-    public String getValueForColumnIndex(int index, String colName) {
-        return this.getRecordsForColumn(colName).get(index);
+    public String getValueForColumnIndex(int index, String colName) throws KeyException {
+        if (!headerIndexMap.containsKey(colName)) {
+//            throw new KeyException("No such column: " + colName + " in the provided .xls file");
+            System.out.println("No such column: " + colName);
+            return "";
+        }
+        return getRecordsForColumn(colName).get(index);
     }
 
 

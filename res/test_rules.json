@@ -119,6 +119,25 @@
     "predicate" : "equals",
     "testVal": "300kr",
     "fieldName" : "300kr"
+  },
+  {
+    "action" : "conditionalCheckFromExcel",
+    "colName" : "product",
+    "predicate" : "equals",
+    "testVal": "300kr",
+    "fieldName" : "300kr"
+  },
+  {
+    "action" : "conditionalCheckFromExcel",
+    "colName" : "swaglongboard",
+    "predicate" : "equals",
+    "testVal": "300kr",
+    "fieldName" : "300kr"
+  },
+  {
+    "action" : "fill",
+    "fieldName" : "fornamn",
+    "value": "Swaggy"
   }
 
 
