@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8adc19d7-4a87-438e-9d98-1e7ff9077a88" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.~lock.challenge-source.xls#" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/XlsPdfGenerator/Result.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/XlsPdfGenerator/com/luminous/MainTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XlsPdfGenerator/results/1.pdf" afterPath="$PROJECT_DIR$/out/production/XlsPdfGenerator/results/1.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/results/1.pdf" afterPath="$PROJECT_DIR$/res/results/1.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XlsPdfGenerator/results/2.pdf" afterPath="$PROJECT_DIR$/out/production/XlsPdfGenerator/results/2.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/results/2.pdf" afterPath="$PROJECT_DIR$/res/results/2.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XlsPdfGenerator/results/3.pdf" afterPath="$PROJECT_DIR$/out/production/XlsPdfGenerator/results/3.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/results/3.pdf" afterPath="$PROJECT_DIR$/res/results/3.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XlsPdfGenerator/results/4.pdf" afterPath="$PROJECT_DIR$/out/production/XlsPdfGenerator/results/4.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/results/4.pdf" afterPath="$PROJECT_DIR$/res/results/4.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XlsPdfGenerator/results/5.pdf" afterPath="$PROJECT_DIR$/out/production/XlsPdfGenerator/results/5.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/results/5.pdf" afterPath="$PROJECT_DIR$/res/results/5.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XlsPdfGenerator/com/luminous/Main.class" afterPath="$PROJECT_DIR$/out/production/XlsPdfGenerator/com/luminous/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XlsPdfGenerator/com/luminous/XlsWorker.class" afterPath="$PROJECT_DIR$/out/production/XlsPdfGenerator/com/luminous/XlsWorker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/luminous/Main.java" afterPath="$PROJECT_DIR$/src/com/luminous/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/luminous/XlsWorker.java" afterPath="$PROJECT_DIR$/src/com/luminous/XlsWorker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XlsPdfGenerator/test_rules.json" afterPath="$PROJECT_DIR$/out/production/XlsPdfGenerator/test_rules.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/test_rules.json" afterPath="$PROJECT_DIR$/res/test_rules.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/.~lock.challenge-source.xls#" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="XlsPdfGenerator.iws" />
@@ -66,8 +49,8 @@
               <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/com/luminous/Main.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.3272727" vertical-offset="306" max-vertical-offset="1602">
-                      <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+                    <state vertical-scroll-proportion="0.8380567" vertical-offset="306" max-vertical-offset="1602">
+                      <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
                       <folding>
                         <element signature="imports" expanded="true" />
                       </folding>
@@ -140,15 +123,28 @@
           </split-first>
           <split-second>
             <leaf>
-              <file leaf-file-name="XlsWorker.java" pinned="false" current-in-tab="true">
+              <file leaf-file-name="XlsWorker.java" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/com/luminous/XlsWorker.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.556962" vertical-offset="1388" max-vertical-offset="1764">
-                      <caret line="84" column="22" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+                    <state vertical-scroll-proportion="0.0" vertical-offset="1369" max-vertical-offset="1764">
+                      <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
                       <folding>
                         <element signature="imports" expanded="true" />
                       </folding>
                     </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/README.md">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.41764706" vertical-offset="956" max-vertical-offset="1296">
+                      <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+                      <folding />
+                    </state>
+                  </provider>
+                  <provider editor-type-id="MarkdownPreviewEditor">
+                    <state />
                   </provider>
                 </entry>
               </file>
@@ -185,7 +181,7 @@
           <file leaf-file-name="test_rules.json" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/res/test_rules.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7736318" vertical-offset="2155" max-vertical-offset="2682">
+                <state vertical-scroll-proportion="2.7707865" vertical-offset="0" max-vertical-offset="2682">
                   <caret line="137" column="18" selection-start-line="137" selection-start-column="18" selection-end-line="137" selection-end-column="18" />
                   <folding />
                 </state>
@@ -294,9 +290,10 @@
         <option value="$PROJECT_DIR$/src/com/luminous/CriteriaCheck.java" />
         <option value="$PROJECT_DIR$/src/com/luminous/test/RuleHandlingTest.java" />
         <option value="$PROJECT_DIR$/src/com/luminous/domain/Rule.java" />
-        <option value="$PROJECT_DIR$/res/test_rules.json" />
         <option value="$PROJECT_DIR$/src/com/luminous/Main.java" />
         <option value="$PROJECT_DIR$/src/com/luminous/XlsWorker.java" />
+        <option value="$PROJECT_DIR$/res/test_rules.json" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -307,8 +304,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
     <option name="y" value="24" />
-    <option name="width" value="1301" />
-    <option name="height" value="744" />
+    <option name="width" value="1855" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -335,7 +332,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -429,6 +425,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1012,7 +1009,9 @@
       <workItem from="1432450508588" duration="4321000" />
       <workItem from="1432455679214" duration="11108000" />
       <workItem from="1432487816831" duration="307000" />
-      <workItem from="1432549318241" duration="249000" />
+      <workItem from="1432549318241" duration="275000" />
+      <workItem from="1432570518845" duration="804000" />
+      <workItem from="1432571544098" duration="901000" />
     </task>
     <task id="LOCAL-00001" summary="fill and check from excel working">
       <created>1432452698751</created>
@@ -1020,20 +1019,25 @@
       <option name="project" value="LOCAL" />
       <updated>1432452698751</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="no such column">
+      <created>1432549581242</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1432549581242</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50542000" />
+    <option name="totallyTimeSpent" value="52273000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1041,21 +1045,22 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27160493" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25896415" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940239" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25870648" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30208334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940239" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30208334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27160493" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1071,11 +1076,14 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
     <MESSAGE value="fill and check from excel working" />
-    <option name="LAST_COMMIT_MESSAGE" value="fill and check from excel working" />
+    <MESSAGE value="no such column" />
+    <option name="LAST_COMMIT_MESSAGE" value="no such column" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1092,13 +1100,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/luminous/test/MainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="288">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/luminous/utils/Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="378">
@@ -1498,8 +1499,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/luminous/XlsWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.556962" vertical-offset="1388" max-vertical-offset="1764">
-          <caret line="84" column="22" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1369" max-vertical-offset="1764">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1508,7 +1509,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/test_rules.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7736318" vertical-offset="2155" max-vertical-offset="2682">
+        <state vertical-scroll-proportion="2.7707865" vertical-offset="0" max-vertical-offset="2682">
           <caret line="137" column="18" selection-start-line="137" selection-start-column="18" selection-end-line="137" selection-end-column="18" />
           <folding />
         </state>
@@ -1516,12 +1517,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/luminous/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3272727" vertical-offset="306" max-vertical-offset="1602">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.8380567" vertical-offset="306" max-vertical-offset="1602">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41764706" vertical-offset="956" max-vertical-offset="1296">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>
