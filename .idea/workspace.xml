@@ -137,8 +137,8 @@
               <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/README.md">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.052941177" vertical-offset="468" max-vertical-offset="1404">
-                      <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+                    <state vertical-scroll-proportion="0.42352942" vertical-offset="342" max-vertical-offset="1404">
+                      <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
                       <folding />
                     </state>
                   </provider>
@@ -1010,7 +1010,7 @@
       <workItem from="1432487816831" duration="307000" />
       <workItem from="1432549318241" duration="275000" />
       <workItem from="1432570518845" duration="804000" />
-      <workItem from="1432571544098" duration="1140000" />
+      <workItem from="1432571544098" duration="1163000" />
     </task>
     <task id="LOCAL-00001" summary="fill and check from excel working">
       <created>1432452698751</created>
@@ -1036,11 +1036,17 @@
       <option name="project" value="LOCAL" />
       <updated>1432572576000</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="readme">
+      <created>1432572689723</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1432572689723</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52512000" />
+    <option name="totallyTimeSpent" value="52535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -1540,8 +1546,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.052941177" vertical-offset="468" max-vertical-offset="1404">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.42352942" vertical-offset="342" max-vertical-offset="1404">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
           <folding />
         </state>
       </provider>

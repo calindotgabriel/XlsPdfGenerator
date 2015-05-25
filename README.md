@@ -25,9 +25,9 @@ literal equality test, contains looks for a substring.
 <h3>Example rules:</h3>
 
 {
-    <p>action" : "fill",</p>    
-    <p>"fieldName" : "textFirstName",</p>
-    <p>"value" : "Calin"</p>
+    "action" : "fill",
+    "fieldName" : "textFirstName",
+    "value" : "Calin"
 }
 
 {
