@@ -1,7 +1,7 @@
 # XlsPdfGenerator
 
-<h2>Generates PDF files with data extracted from EXCEL columnns,
-using a PDF template, by given rules from a .JSON file.</h2>
+<h4>Generates PDF files with data extracted from EXCEL columnns,
+using a PDF template, by given rules from a .JSON file.</h4>
 
 <h3>JSON Rule types:</h3>
 
@@ -25,9 +25,9 @@ literal equality test, contains looks for a substring.
 <h3>Example rules:</h3>
 
 {
-    "action" : "fill",
-    "fieldName" : "textFirstName",
-    "value" : "Calin"
+    <p>action" : "fill",</p>    
+    <p>"fieldName" : "textFirstName",</p>
+    <p>"value" : "Calin"</p>
 }
 
 {
