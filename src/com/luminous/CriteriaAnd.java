@@ -1,8 +1,7 @@
 package com.luminous;
 
-import com.luminous.domain.Rule;
+import com.luminous.domain.Command;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,11 +18,11 @@ public class CriteriaAnd implements Criteria{
     }
 
     @Override
-    public List<Rule> meetCriteria(List<Rule> rules) {
-        List<Rule> firstCriteriaItems = criteria.meetCriteria(rules);
-        List<Rule> otherCriteriaItems = otherCriteria.meetCriteria(rules);
+    public List<Command> meetCriteria(List<Command> commands) {
+        List<Command> firstCriteriaItems = criteria.meetCriteria(commands);
+        List<Command> otherCriteriaItems = otherCriteria.meetCriteria(commands);
 
-        List<Rule> firstCriteriaRules = criteria.meetCriteria(rules);
-        return otherCriteria.meetCriteria(firstCriteriaRules);
+        List<Command> firstCriteriaCommands = criteria.meetCriteria(commands);
+        return otherCriteria.meetCriteria(firstCriteriaCommands);
     }
 }

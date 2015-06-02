@@ -2,7 +2,7 @@ package com.luminous;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.luminous.domain.Rule;
+import com.luminous.domain.Command;
 import com.luminous.utils.Util;
 
 import java.io.IOException;
@@ -16,7 +16,7 @@ import java.util.List;
 public class JsonSerializer {
 
     private String jsonArray;
-    private static final Type LIST_TYPE = new TypeToken<ArrayList<Rule>>() {
+    private static final Type LIST_TYPE = new TypeToken<ArrayList<Command>>() {
     }.getType();
 
 
@@ -25,7 +25,7 @@ public class JsonSerializer {
     }
 
 
-    public List<Rule> serializeJsonArray() {
+    public List<Command> serializeJsonArray() {
         return new Gson().fromJson(jsonArray, LIST_TYPE);
     }
 }

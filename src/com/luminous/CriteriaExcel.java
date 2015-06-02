@@ -1,6 +1,6 @@
 package com.luminous;
 
-import com.luminous.domain.Rule;
+import com.luminous.domain.Command;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,14 +11,14 @@ import java.util.List;
 public class CriteriaExcel implements Criteria{
 
     @Override
-    public List<Rule> meetCriteria(List<Rule> rules) {
-        List<Rule> excelRules = new ArrayList<Rule>();
+    public List<Command> meetCriteria(List<Command> commands) {
+        List<Command> excelCommands = new ArrayList<Command>();
 
-        for (Rule rule : rules) {
-            if (rule.getAction().toLowerCase().contains("excel")) {
-                excelRules.add(rule);
+        for (Command command : commands) {
+            if (command.getAction().toLowerCase().contains("excel")) {
+                excelCommands.add(command);
             }
         }
-        return excelRules;
+        return excelCommands;
     }
 }

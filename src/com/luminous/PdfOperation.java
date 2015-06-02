@@ -4,9 +4,8 @@ import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.AcroFields;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
-import com.luminous.domain.Rule;
+import com.luminous.domain.Command;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -32,13 +31,16 @@ public class PdfOperation {
         reader.close();
     }
 
-    public void executeFill(Rule rule) throws IOException, DocumentException {
-        form.setField(rule.getFieldName(), rule.getValue());
+    public void executeFill(Command command) throws IOException, DocumentException {
+        form.setField(command.getFieldName(), command.getValue());
     }
 
 
-    public void executeCheck(Rule rule) throws IOException, DocumentException {
-        form.setField(rule.getFieldName(), STATE_CHECKED);
+    public void executeCheck(Command command) throws IOException, DocumentException {
+        form.setField(command.getFieldName(), STATE_CHECKED);
     }
+
+
+
 
 }

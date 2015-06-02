@@ -1,6 +1,6 @@
 package com.luminous;
 
-import com.luminous.domain.Rule;
+import com.luminous.domain.Command;
 
 import java.util.List;
 
@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface Criteria {
 
-    public List<Rule> meetCriteria(List<Rule> rules);
+    public List<Command> meetCriteria(List<Command> commands);
 }

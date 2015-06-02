@@ -16,6 +16,7 @@ import java.util.*;
  */
 public class XlsWorker {
 
+    public static final String EMPTY_STRING = "";
     private final HSSFSheet sheet;
     private final FileInputStream file;
     private Map<String, List<String>> colResultMap;
@@ -53,8 +54,7 @@ public class XlsWorker {
                 cell.setCellType(Cell.CELL_TYPE_STRING);
                 results.add(cell.getStringCellValue());
             } else {
-//                System.out.println("Warning, empty element at: " + columnName);
-                results.add("");
+                results.add(EMPTY_STRING);
             }
         }
         return results;
@@ -78,12 +78,19 @@ public class XlsWorker {
         return headerIndexMap;
     }
 
+    /**
+     * Gets the value at given index in .xls.
+     * @param index columnIndex
+     * @param colName columnName
+     * @return value found, else an empty string
+     */
     public String getValueForColumnIndex(int index, String colName) {
         if (!headerIndexMap.containsKey(colName)) {
-            System.out.println("No such column: " + colName);
-            return "";
+//            System.out.println("No such column: " + colName); //TODO
+            return EMPTY_STRING;
         }
-        return getRecordsForColumn(colName).get(index);
+        int resultsIndex = index - 1;
+        return getRecordsForColumn(colName).get(resultsIndex);
     }
 
 

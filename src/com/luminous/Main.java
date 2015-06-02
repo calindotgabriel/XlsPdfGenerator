@@ -1,83 +1,87 @@
 package com.luminous;
 
-import com.google.gson.Gson;
 import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.pdf.*;
-import com.luminous.domain.Rule;
-import com.luminous.domain.Validator;
+import com.luminous.domain.Command;
 import com.luminous.exception.NotEnoughArgumentsException;
-import com.luminous.utils.Util;
 
 import java.io.*;
 import java.security.KeyException;
 import java.util.List;
-import java.util.Set;
 
 public class Main {
 
 
-    public static void main(String[] args) throws IOException, DocumentException, KeyException, NotEnoughArgumentsException {
+    public static void main(String[] args) {
 
-        Validator validator = new Validator();
-        validator.validate(args);
+//        Validator validator = new Validator();
+//        validator.validate(args);
 
+        // open closed principle, data income
+/*
         String xlsPath = args[0];
         String pdfTemplatePath = args[1];
         String rulesPath = args[2];
-        String outPath = args[3];
+        String outPath = args[3]; // if lib, do not hardcode parameters
 
         JsonSerializer serializer = new JsonSerializer(rulesPath);
-        List<Rule> rules = serializer.serializeJsonArray();
+        List<Command> commands = serializer.serializeJsonArray();
 
+        // supported criterias
         Criteria fill = new CriteriaFill();
         Criteria check = new CriteriaCheck();
         Criteria excel = new CriteriaExcel();
         Criteria conditional = new CriteriaConditional();
-
         Criteria fillFromExcel = new CriteriaAnd(fill, excel);
         Criteria checkFromExcel = new CriteriaAnd(check, excel);
-
         Criteria conditionalCheckFromExcel = new CriteriaAnd(conditional, checkFromExcel);
+        // encapsulate this ^
+
+        //builder.setXlsPath().... . build()
 
         XlsWorker worker = new XlsWorker(xlsPath);
         int pdfsToOut = worker.getDataRowsNr();
 
-        for (int i = 1 ; i <= pdfsToOut ; i ++) {
-            PdfOperation operation = new PdfOperation(pdfTemplatePath, outPath + "/" + + i + ".pdf");
+        ExcelRuleAdapter excelRuleAdapter = new ExcelRuleAdapter(worker);
+        ConditionalExcelRuleAdapter conditionalExcelRuleAdapter= new ConditionalExcelRuleAdapter(worker);
 
-            for (Rule fillRule : fill.meetCriteria(rules)) {
-                if (fillRule.isSimple()) {
-                    operation.executeFill(fillRule);
+        for (int pdfIndex = 1 ; pdfIndex <= pdfsToOut ; pdfIndex ++) {
+            String outPdfPath = outPath + "/" + +pdfIndex + ".pdf";
+            PdfOperation operation = new PdfOperation(pdfTemplatePath, outPdfPath);
+
+            for (Command simpleFillCommand : fill.meetCriteria(commands)) {
+                if (simpleFillCommand.isSimple()) {
+                    operation.executeFill(simpleFillCommand);
                 }
             }
 
-            for (Rule checkRule : check.meetCriteria(rules)) {
-                if (checkRule.isSimple()) {
-                    operation.executeCheck(checkRule);
+            for (Command simpleCheckCommand : check.meetCriteria(commands)) {
+                if (simpleCheckCommand.isSimple()) {
+                    operation.executeCheck(simpleCheckCommand);
                 }
             }
 
-            for (Rule fillFromExcelRule : fillFromExcel.meetCriteria(rules)) {
-                String columnValueAtIndex = worker.getValueForColumnIndex(i - 1, fillFromExcelRule.getColName());
-                fillFromExcelRule.setValue(columnValueAtIndex);
-                operation.executeFill(fillFromExcelRule);
+            for (Command fillFromExcelCommand : fillFromExcel.meetCriteria(commands)) {
+                Command command = excelRuleAdapter.excelToSimple(pdfIndex, fillFromExcelCommand);
+                operation.executeFill(command);
             }
 
-            for (Rule conditionalCheckFromExcelRule : conditionalCheckFromExcel.meetCriteria(rules)) {
-                String columnValueAtIndex = worker.getValueForColumnIndex(i - 1, conditionalCheckFromExcelRule.getColName());
-                if (conditionalCheckFromExcelRule.getPredicate().equals("contains")) {
-                    if (columnValueAtIndex.toLowerCase().contains(conditionalCheckFromExcelRule.getTestVal().toLowerCase())) {
-                        operation.executeCheck(conditionalCheckFromExcelRule);
-                    }
+            for (Command conditionalCheckFromExcelCommand : conditionalCheckFromExcel.meetCriteria(commands)) {
+                if (conditionalExcelRuleAdapter.ruleMeetsRequirements(pdfIndex, conditionalCheckFromExcelCommand)) {
+                    operation.executeCheck(conditionalCheckFromExcelCommand);
                 }
-                if (conditionalCheckFromExcelRule.getPredicate().equals("equals")) {
-                    if (columnValueAtIndex.toLowerCase().equals(conditionalCheckFromExcelRule.getTestVal().toLowerCase())) {
-                        operation.executeCheck(conditionalCheckFromExcelRule);
-                    }
-                }
+
             }
             operation.commit();
+            System.out.println("Written file " + outPdfPath);
         }
         worker.commit();
+    }*/
+
+        Generator pdfGenerator = new GeneratorBulder(OUT_PATH)
+                .withExcelDocument(EXCEL_PATH)
+                .withJsonRules(JSON_PATH)
+                .withPdfTemplate(PDF_TEMPLATE_PATH)
+                .build();
+        pdfGenerator.start();
     }
 }

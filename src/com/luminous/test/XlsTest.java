@@ -1,14 +1,9 @@
 package com.luminous.test;
 
 import com.itextpdf.text.DocumentException;
-import com.luminous.PdfOperation;
 import com.luminous.XlsWorker;
-import com.luminous.domain.Rule;
+import com.luminous.domain.Command;
 import junit.framework.TestCase;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
 
 import java.io.*;
 import java.util.*;
@@ -71,13 +66,13 @@ public class XlsTest extends TestCase {
     }*/
 
     public void testGetColName() throws IOException {
-        Rule rule = new Rule();
-        rule.setAction("fillFromExcel");
-        rule.setColName("bill_to_firstname");
-        rule.setFieldName("fornamn");
+        Command command = new Command();
+        command.setAction("fillFromExcel");
+        command.setColName("bill_to_firstname");
+        command.setFieldName("fornamn");
 
         XlsWorker worker = new XlsWorker("res/challenge-source.xls");
-        List<String> results = worker.getRecordsForColumn(rule.getColName());
+        List<String> results = worker.getRecordsForColumn(command.getColName());
         worker.commit();
         assertEquals(5, results.size());
 
@@ -87,13 +82,13 @@ public class XlsTest extends TestCase {
     }
 
     public void testMultiPdfGen() throws IOException, DocumentException {
-        Rule rule = new Rule();
-        rule.setAction("fillFromExcel");
-        rule.setColName("bill_to_firstname");
-        rule.setFieldName("fornamn");
+        Command command = new Command();
+        command.setAction("fillFromExcel");
+        command.setColName("bill_to_firstname");
+        command.setFieldName("fornamn");
 
         XlsWorker worker = new XlsWorker("res/challenge-source.xls");
-        List<String> results = worker.getRecordsForColumn(rule.getColName());
+        List<String> results = worker.getRecordsForColumn(command.getColName());
 
         int numOfRows = worker.getDataRowsNr();
         for (int i = 1 ; i <= numOfRows ; i++) {
